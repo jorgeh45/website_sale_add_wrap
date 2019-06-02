@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+	<data>
+		<template id="cart_assets_frontend" inherit_id="website.assets_frontend" name="Cart">
+			<xpath expr="." position="inside">
+				<link rel="stylesheet" href="/website_sale_add_wrap/static/src/css/pretty-checkbox.min.css"/>
+				<link rel="stylesheet" href="/website_sale_add_wrap/static/src/css/cart.css"/>
+				<script type="text/javascript" src="/website_sale_add_wrap/static/src/js/website_sale.js"></script>
+			</xpath>
+		</template>
+
+		<template id="gift_cart_customization" inherit_id="website_sale.cart_lines" name="gift">
+
+			<xpath expr="//tbody/*[1]" position="inside">
+				<tr class="noBorder">
+					<td class="td-wrap">
+						<div class="pretty p-icon p-curve p-tada">
+							<input type="checkbox" class="js_wrap" aria-label="This is a gift" name="wrap" t-att-data-is_gilf="line.wrap" t-att-checked="line.wrap"
+							t-att-data-line-id="line.id" t-att-data-product-id="line.product_id.id"/>
+							<div class="state p-primary-o">
+								<i class="icon fa fa-check"></i>
+								<label>Gift Wrap</label>
+							</div>
+						</div>
+					</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</xpath>
+		</template>
+
+
+	</data>
+</odoo>
