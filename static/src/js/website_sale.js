@@ -2,8 +2,6 @@ odoo.define('website_sale.cart', function (require) {
     "use strict";
     var ProductConfiguratorMixin = require('sale.ProductConfiguratorMixin');
     var sAnimations = require('website.content.snippets.animation');
-    var core = require('web.core')
-    var _t = core._t
 
     sAnimations.registry.WebsiteSaleCustomizeCart = sAnimations.Class.extend(ProductConfiguratorMixin, {
         selector: '.oe_website_sale',

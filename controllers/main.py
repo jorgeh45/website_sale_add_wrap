@@ -16,7 +16,7 @@ class WebsiteSale(WebsiteSale):
             request.website.sale_reset()
             return {}
 
-        if set_wrap:
+        if set_wrap is not None:
             order._update_wrap(product_id=product_id,
                                line_id=line_id, set_wrap=set_wrap)
         return {}
